@@ -4,10 +4,11 @@ import MuiButton from '@mui/material/Button';
 
 interface ButtonProps {
   label: string;
+  variant: 'text' | 'outlined' | 'contained';
 }
 
 const Button = (props: ButtonProps) => {
-  return <MuiButton variant="contained">{props.label}</MuiButton>;
+  return <MuiButton variant={props.variant}>{props.label}</MuiButton>;
 };
 
 export default Button;
