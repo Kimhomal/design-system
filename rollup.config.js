@@ -24,15 +24,15 @@ export default [
       },
     ],
     plugins: [
-      resolve(),
-      commonjs(),
-      typescript({ tsconfig: './tsconfig.json' }),
       postcss({
         plugins: [],
         minimize: true,
       }),
       peerDepsExternal(),
-      terser(),
+      resolve(),
+      commonjs(),
+      typescript({ tsconfig: './tsconfig.json' }),
+      terser(), // minimize javascript file
     ],
   },
   {
