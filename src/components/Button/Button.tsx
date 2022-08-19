@@ -2,7 +2,7 @@ import React from 'react';
 import './Button.css';
 import MuiButton from '@mui/material/Button';
 
-interface ButtonProps {
+export interface ButtonProps {
   label: string;
   variant?: 'text' | 'outlined' | 'contained';
 }
