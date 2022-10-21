@@ -1,6 +1,5 @@
 import React from 'react';
 import './Button.css';
-import MuiButton from '@mui/material/Button';
 
 export interface ButtonProps {
   label: string;
@@ -8,7 +7,7 @@ export interface ButtonProps {
 }
 
 const Button = (props: ButtonProps) => {
-  return <MuiButton variant={props.variant || 'text'}>{props.label}</MuiButton>;
+  return <button>{props.label}</button>;
 };
 
 export default Button;
