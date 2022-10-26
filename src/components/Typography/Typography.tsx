@@ -5,9 +5,9 @@ import React, {
   forwardRef,
   PropsWithChildren,
 } from 'react';
-import { Theme } from '../../system/createTheme/createTheme';
 import { Variant, Weight } from '../../system/createTheme/createTypography';
 import useThemeWithoutDefault from '../../system/useThemeWithoutDefault';
+import { OwnerStateProps } from '../common';
 
 export interface TypographyProps {
   component?: ElementType;
@@ -26,18 +26,10 @@ export interface TypographyProps {
   gutterBottom?: boolean;
 }
 
-interface OwnerStateProps extends TypographyProps {
-  themeProps: Theme;
-}
-
-interface TypographyRootProps {
-  ownerState: OwnerStateProps;
-}
-
 const TypographyRoot = styled('span', {
   shouldForwardProp: (prop) =>
     prop !== 'theme' && prop !== 'ownerState' && prop !== 'as',
-})<TypographyRootProps>(({ theme, ownerState }) => ({
+})<OwnerStateProps<TypographyProps>>(({ theme, ownerState }) => ({
   margin: 0,
   ...(theme?.typography?.[ownerState.variant]?.[ownerState.weight] ||
     ownerState.themeProps.typography[ownerState.variant][ownerState.weight]),
