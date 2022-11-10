@@ -7,61 +7,62 @@ import insurBlue from '../colors/insurBlue';
 import lineGrey from '../colors/lineGrey';
 import red from '../colors/red';
 import { deepmerge } from '../../utils';
-import NotoSansKR700Woff2 from '../../public/fonts/noto-sans-kr-v27-korean-700.woff2';
-import NotoSansKR700Woff from '../../public/fonts/noto-sans-kr-v27-korean-700.woff';
-import NotoSansKR700Svg from '../../public/fonts/noto-sans-kr-v27-korean-700.svg';
-import NotoSansKR700Eot from '../../public/fonts/noto-sans-kr-v27-korean-700.eot';
-import NotoSansKR500Woff2 from '../../public/fonts/noto-sans-kr-v27-korean-500.woff2';
-import NotoSansKR500Woff from '../../public/fonts/noto-sans-kr-v27-korean-500.woff';
-import NotoSansKR500Svg from '../../public/fonts/noto-sans-kr-v27-korean-500.svg';
-import NotoSansKR500Eot from '../../public/fonts/noto-sans-kr-v27-korean-500.eot';
-import NotoSansKRWoff2 from '../../public/fonts/noto-sans-kr-v27-korean-regular.woff2';
-import NotoSansKRWoff from '../../public/fonts/noto-sans-kr-v27-korean-regular.woff';
-import NotoSansKRSvg from '../../public/fonts/noto-sans-kr-v27-korean-regular.svg';
-import NotoSansKREot from '../../public/fonts/noto-sans-kr-v27-korean-regular.eot';
+// import '../../public/fonts/font.css';
+// import NotoSansKR700Woff2 from '../../public/fonts/noto-sans-kr-v27-korean-700.woff2';
+// import NotoSansKR700Woff from '../../public/fonts/noto-sans-kr-v27-korean-700.woff';
+// import NotoSansKR700Svg from '../../public/fonts/noto-sans-kr-v27-korean-700.svg';
+// import NotoSansKR700Eot from '../../public/fonts/noto-sans-kr-v27-korean-700.eot';
+// import NotoSansKR500Woff2 from '../../public/fonts/noto-sans-kr-v27-korean-500.woff2';
+// import NotoSansKR500Woff from '../../public/fonts/noto-sans-kr-v27-korean-500.woff';
+// import NotoSansKR500Svg from '../../public/fonts/noto-sans-kr-v27-korean-500.svg';
+// import NotoSansKR500Eot from '../../public/fonts/noto-sans-kr-v27-korean-500.eot';
+// import NotoSansKRWoff2 from '../../public/fonts/noto-sans-kr-v27-korean-regular.woff2';
+// import NotoSansKRWoff from '../../public/fonts/noto-sans-kr-v27-korean-regular.woff';
+// import NotoSansKRSvg from '../../public/fonts/noto-sans-kr-v27-korean-regular.svg';
+// import NotoSansKREot from '../../public/fonts/noto-sans-kr-v27-korean-regular.eot';
 
 export type ThemeMode = 'admin' | 'self' | 'parts' | 'repair';
 
 const modes: Record<ThemeMode, ThemeOptions> = {
   admin: {
     components: {
-      MuiCssBaseline: {
-        styleOverrides: `
-          @font-face {
-            font-family: 'Noto Sans KR';
-            font-style: normal;
-            font-display: swap;
-            font-weight: 400;
-            src: local(''),
-              url(${NotoSansKRWoff2}) format('woff2'), /* Super Modern Browsers */
-              url(${NotoSansKRWoff}) format('woff'), /* Modern Browsers */
-              url(${NotoSansKRSvg}) format('svg'), /* Legacy iOS */
-              url(${NotoSansKREot}) format('embedded-opentype'); /* IE Compat Modes */
-          }
-          @font-face {
-            font-family: 'Noto Sans KR';
-            font-style: normal;
-            font-display: swap;
-            font-weight: 500;
-            src: local(''),
-              url(${NotoSansKR500Woff2}) format('woff2'),
-              url(${NotoSansKR500Woff}) format('woff'),
-              url(${NotoSansKR500Svg}) format('svg'),
-              url(${NotoSansKR500Eot}) format('embedded-opentype');
-          }
-          @font-face {
-            font-family: 'Noto Sans KR';
-            font-style: normal;
-            font-display: swap;
-            font-weight: 700;
-            src: local(''),
-              url(${NotoSansKR700Woff2}) format('woff2'),
-              url(${NotoSansKR700Woff}) format('woff'),
-              url(${NotoSansKR700Svg}) format('svg'),
-              url(${NotoSansKR700Eot}) format('embedded-opentype');
-          }
-        `,
-      },
+      // MuiCssBaseline: {
+      //   styleOverrides: `
+      //     @font-face {
+      //       font-family: 'Noto Sans KR';
+      //       font-style: normal;
+      //       font-display: swap;
+      //       font-weight: 400;
+      //       src: local(''),
+      //         url(${NotoSansKRWoff2}) format('woff2'), /* Super Modern Browsers */
+      //         url(${NotoSansKRWoff}) format('woff'), /* Modern Browsers */
+      //         url(${NotoSansKRSvg}) format('svg'), /* Legacy iOS */
+      //         url(${NotoSansKREot}) format('embedded-opentype'); /* IE Compat Modes */
+      //     }
+      //     @font-face {
+      //       font-family: 'Noto Sans KR';
+      //       font-style: normal;
+      //       font-display: swap;
+      //       font-weight: 500;
+      //       src: local(''),
+      //         url(${NotoSansKR500Woff2}) format('woff2'),
+      //         url(${NotoSansKR500Woff}) format('woff'),
+      //         url(${NotoSansKR500Svg}) format('svg'),
+      //         url(${NotoSansKR500Eot}) format('embedded-opentype');
+      //     }
+      //     @font-face {
+      //       font-family: 'Noto Sans KR';
+      //       font-style: normal;
+      //       font-display: swap;
+      //       font-weight: 700;
+      //       src: local(''),
+      //         url(${NotoSansKR700Woff2}) format('woff2'),
+      //         url(${NotoSansKR700Woff}) format('woff'),
+      //         url(${NotoSansKR700Svg}) format('svg'),
+      //         url(${NotoSansKR700Eot}) format('embedded-opentype');
+      //     }
+      //   `,
+      // },
       MuiButton: {
         styleOverrides: {
           root: ({ ownerState, theme }) => ({
@@ -143,7 +144,7 @@ const modes: Record<ThemeMode, ThemeOptions> = {
       red: deepmerge(MuiRed, red),
     },
     typography: {
-      fontFamily: ["'Noto Sans KR'", 'sans-serif'].join(','),
+      // fontFamily: ["'Noto Sans KR'", 'sans-serif'].join(','),
       button: {
         fontWeight: 500,
         fontStyle: 'normal',

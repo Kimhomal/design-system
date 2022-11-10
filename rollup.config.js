@@ -1,7 +1,7 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
-import url from '@rollup/plugin-url';
+// import url from '@rollup/plugin-url';
 import dts from 'rollup-plugin-dts';
 import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
@@ -31,7 +31,10 @@ export default [
       }),
       peerDepsExternal(),
       resolve(),
-      url(),
+      // url({
+      //   include: ['**/*.woff', '**/*.woff2', '**/*.svg', '**/*.eot'],
+      //   limit: Infinity,
+      // }),
       commonjs(),
       typescript({ tsconfig: './tsconfig.json' }),
       terser(), // minimize javascript file
