@@ -8,6 +8,6 @@ export const parameters = {
   },
 };
 
-export const argTypes = {
-  mode: { control: 'select', options: ['admin', 'self'] },
-};
+// export const argTypes = {
+//   mode: { control: 'select', options: ['admin', 'self'] },
+// };
