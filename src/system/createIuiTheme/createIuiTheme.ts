@@ -1,3 +1,4 @@
+import { FormControlLabel, formControlLabelClasses } from '@mui/material';
 import { createTheme, Theme, ThemeOptions, alpha } from '@mui/material/styles';
 import { red as MuiRed } from '@mui/material/colors';
 import { buttonClasses } from '@mui/material/Button';
@@ -126,6 +127,17 @@ const modes: Record<ThemeMode, ThemeOptions> = {
             [`& .${buttonClasses.endIcon}`]: {
               marginLeft: 0,
             },
+          }),
+        },
+      },
+      MuiFormControlLabel: {
+        styleOverrides: {
+          root: ({ ownerState, theme }) => ({
+            ...(ownerState.disabled && {
+              [`&& .${formControlLabelClasses.label}`]: {
+                color: theme.palette.blueGrey[600],
+              },
+            }),
           }),
         },
       },
