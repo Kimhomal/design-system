@@ -24,10 +24,10 @@ storybook library 실행\
 
 ## `npm run chromatic`
 ```zsh
+# default setting
 yarn add -D chromatic
 npx chromatic --project-token=ebffb6fb9bee
 
-npm run build-storybook
 npm run chromatic
 ```
 
