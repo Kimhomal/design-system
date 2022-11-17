@@ -34,5 +34,5 @@ npm run chromatic
 ## 참고문헌
 
 [How to Create and Publish a React Component Library](https://dev.to/alexeagleson/how-to-create-and-publish-a-react-component-library-2oe#publishing-your-library)\
-[Build And Publish A React Component Library](https://www.youtube.com/watch?v=hf6Z8OZanec)
+[Build And Publish A React Component Library](https://www.youtube.com/watch?v=hf6Z8OZanec)\
 [Github package publish 방법](https://min9nim.vercel.app/2021-05-17-github-packages)
