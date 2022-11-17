@@ -22,6 +22,15 @@ insurparts react components library publish\
 storybook library 실행\
 [storybook 공식홈페이지](https://storybook.js.org)
 
+## `npm run chromatic`
+```zsh
+yarn add -D chromatic
+npx chromatic --project-token=ebffb6fb9bee
+
+npm run build-storybook
+npm run chromatic
+```
+
 ## 참고문헌
 
 [How to Create and Publish a React Component Library](https://dev.to/alexeagleson/how-to-create-and-publish-a-react-component-library-2oe#publishing-your-library)\
