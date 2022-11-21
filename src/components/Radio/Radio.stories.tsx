@@ -1,9 +1,9 @@
 import React, { ChangeEvent, useState } from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { FormControl, FormControlLabel, RadioGroup } from '@mui/material';
 import { IuiThemeProvider } from '../../system';
 import { COMPONENTS_TITLE, INPUTS_TITLE } from '../../constants';
 import Radio from './Radio';
-import { FormControl, FormControlLabel, RadioGroup } from '@mui/material';
 
 export default {
   title: `${COMPONENTS_TITLE}/${INPUTS_TITLE}/Radio`,

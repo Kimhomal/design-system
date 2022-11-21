@@ -1,5 +1,5 @@
 import React from 'react';
-import { Radio as MuiRadio, RadioProps } from '@mui/material';
+import { Radio as MuiRadio, radioClasses, RadioProps } from '@mui/material';
 import RadioChecked from '../../icons/RadioChecked';
 import RadioUnChecked from '../../icons/RadioUnChecked';
 import { blueGrey, lineGrey } from '../../system/colors';
@@ -15,7 +15,7 @@ const Radio = (props: RadioProps) => {
         {
           padding: '8px',
           color: lineGrey[200],
-          '&.Mui-disabled': {
+          [`&.${radioClasses.disabled}`]: {
             color: blueGrey[400],
           },
         },
