@@ -10,3 +10,5 @@ export * from './TableButton';
 export { default as Radio } from './Radio';
 
 export { default as ToggleButton } from './ToggleButton';
+
+export { default as Chip } from './Chip';
