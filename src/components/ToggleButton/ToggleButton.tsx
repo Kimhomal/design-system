@@ -16,12 +16,10 @@ const ToggleButton = (props: ToggleButtonProps) => {
         {
           width: WIDTH,
           height: 36,
-          '&': {
-            borderRadius: 'unset',
-            borderColor: lineGrey[200],
-            borderRight: 'unset',
-            color: grey[300],
-          },
+          borderRadius: 'unset',
+          borderColor: lineGrey[200],
+          borderRight: 'unset',
+          color: grey[300],
           '&:hover': {
             backgroundColor: common.white,
           },
