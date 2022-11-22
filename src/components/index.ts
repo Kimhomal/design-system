@@ -6,3 +6,7 @@ export * from './Typography';
 
 export { default as TableButton } from './TableButton';
 export * from './TableButton';
+
+export { default as Radio } from './Radio';
+
+export { default as ToggleButton } from './ToggleButton';
