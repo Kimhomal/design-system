@@ -8,11 +8,10 @@ import { common, grey, insurBlue, lineGrey } from '../../system/colors';
 import { deepmerge } from '../../utils';
 
 const ToggleButton = (props: ToggleButtonProps) => {
-  const { selected, sx, ...rest } = props;
+  const { sx, ...rest } = props;
 
   return (
     <MuiToggleButton
-      selected={selected}
       sx={deepmerge(
         {
           width: WIDTH,
@@ -33,16 +32,14 @@ const ToggleButton = (props: ToggleButtonProps) => {
           '&:last-of-type': {
             borderRight: `1px solid ${lineGrey[200]}`,
           },
-          ...(selected && {
-            [`&.${toggleButtonClasses.selected}`]: {
-              backgroundColor: insurBlue[500],
-              borderColor: insurBlue[500],
-              color: common.white,
-            },
-            [`&.${toggleButtonClasses.selected}:hover`]: {
-              backgroundColor: insurBlue[500],
-            },
-          }),
+          [`&.${toggleButtonClasses.selected}`]: {
+            backgroundColor: insurBlue[500],
+            borderColor: insurBlue[500],
+            color: common.white,
+          },
+          [`&.${toggleButtonClasses.selected}:hover`]: {
+            backgroundColor: insurBlue[500],
+          },
         },
         sx
       )}
