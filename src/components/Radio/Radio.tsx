@@ -9,6 +9,7 @@ const Radio = (props: RadioProps) => {
   const { sx, ...rest } = props;
   return (
     <MuiRadio
+      size="small"
       icon={<RadioUnChecked />}
       checkedIcon={<RadioChecked />}
       sx={deepmerge(
