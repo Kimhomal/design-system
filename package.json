@@ -1,6 +1,6 @@
 {
   "name": "@insurparts-team/ui",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "Insurpart React Components Library",
   "scripts": {
     "rollup": "rollup -c",
