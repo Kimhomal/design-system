@@ -2,7 +2,7 @@ import React, { MouseEvent, useState } from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { IuiThemeProvider } from '../../system';
 import { COMPONENTS_TITLE, INPUTS_TITLE } from '../../constants';
-import ToggleChipGroup from '../ToggleChipGroup/ToggleChipGroup';
+import ToggleChipGroup from '../ToggleChipGroup';
 import ToggleChip from './ToggleChip';
 
 export default {
