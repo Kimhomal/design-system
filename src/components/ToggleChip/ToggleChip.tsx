@@ -51,5 +51,3 @@ const ToggleChip = (props: ToggleButtonProps) => {
 };
 
 export default ToggleChip;
-
-const WIDTH = 100;

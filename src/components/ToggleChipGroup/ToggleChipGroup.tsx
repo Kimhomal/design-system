@@ -24,5 +24,3 @@ const ToggleChipGroup = (props: ToggleButtonGroupProps) => {
 };
 
 export default ToggleChipGroup;
-
-const WIDTH = 100;
