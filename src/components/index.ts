@@ -16,3 +16,5 @@ export { default as Chip } from './Chip';
 export { default as ToggleChip } from './ToggleChip';
 
 export { default as ToggleChipGroup } from './ToggleChipGroup';
+
+export { default as Switch } from './Switch';
