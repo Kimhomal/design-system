@@ -69,37 +69,26 @@ const modes: Record<ThemeMode, ThemeOptions> = {
           root: ({ ownerState, theme }) => ({
             ...(ownerState.variant === 'contained' &&
               ownerState.color === 'primary' && {
-                '&:hover': {
-                  backgroundColor: theme.palette.insurBlue[400],
-                },
-                '&:focus': {
+                '&:hover, &:focus': {
                   backgroundColor: theme.palette.insurBlue[600],
                 },
               }),
             ...(ownerState.variant === 'outlined' &&
               ownerState.color === 'primary' && {
                 borderColor: theme.palette.primary.main,
-                '&:hover': {
-                  color: theme.palette.insurBlue[400],
-                  borderColor: theme.palette.insurBlue[400],
-                  backgroundColor: 'transparent',
-                },
-                '&:focus': {
+                '&:hover, &:focus': {
                   color: theme.palette.insurBlue[600],
                   borderColor: theme.palette.insurBlue[600],
+                  backgroundColor: 'transparent',
                 },
               }),
             ...(ownerState.variant === 'outlined' &&
               ownerState.color === 'secondary' && {
                 borderColor: theme.palette.blueGrey[300],
                 color: theme.palette.grey[900],
-                '&:hover': {
-                  color: theme.palette.blueGrey[600],
-                  borderColor: theme.palette.blueGrey[400],
-                  backgroundColor: 'transparent',
-                },
-                '&:focus': {
+                '&:hover, &:focus': {
                   borderColor: theme.palette.blueGrey[600],
+                  backgroundColor: 'transparent',
                 },
               }),
             [`&.${buttonClasses.disabled}`]: {
