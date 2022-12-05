@@ -10,6 +10,24 @@ export default {
   component: ToggleChip,
 } as ComponentMeta<typeof ToggleChip>;
 
+const StandAloneTemplate: ComponentStory<typeof ToggleChip> = (args) => {
+  const { value, onChange, ...rest } = args;
+  const [selected, setSelected] = useState(true);
+
+  return (
+    <IuiThemeProvider mode="admin">
+      <ToggleChip
+        value={selected ? '공개' : '비공개'}
+        selected={selected}
+        onChange={() => setSelected(!selected)}
+        {...rest}
+      >
+        {selected ? '공개' : '비공개'}
+      </ToggleChip>
+    </IuiThemeProvider>
+  );
+};
+
 const ToggleChipGroupTemplate: ComponentStory<typeof ToggleChip> = (args) => {
   const { value, ...withoutValue } = args;
   const [selected, setSelected] = useState([
@@ -104,6 +122,8 @@ const ToggleChipGroupTemplate: ComponentStory<typeof ToggleChip> = (args) => {
   );
 };
 
+export const StandAlone = StandAloneTemplate.bind({});
 export const WithToggleChipGroup = ToggleChipGroupTemplate.bind({});
 
 WithToggleChipGroup.args = {};
+StandAlone.args = {};
