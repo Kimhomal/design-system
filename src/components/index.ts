@@ -18,3 +18,7 @@ export { default as ToggleChip } from './ToggleChip';
 export { default as ToggleChipGroup } from './ToggleChipGroup';
 
 export { default as Switch } from './Switch';
+
+export { default as Select } from './Select';
+
+export { default as MenuItem } from './MenuItem';
