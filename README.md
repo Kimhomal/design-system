@@ -31,6 +31,11 @@ npx chromatic --project-token=ebffb6fb9bee
 npm run chromatic
 ```
 
+## `install setting`
+```
+vi ~/.npmrc\
+//npm.pkg.github.com/:_authToken=Token String
+```
 ## 참고문헌
 
 [How to Create and Publish a React Component Library](https://dev.to/alexeagleson/how-to-create-and-publish-a-react-component-library-2oe#publishing-your-library)\
