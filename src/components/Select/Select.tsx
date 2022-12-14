@@ -43,8 +43,6 @@ const Select = (props: SelectProps) => {
       MenuProps={{
         PaperProps: {
           sx: {
-            // top: '52px !important', // 인라인 스타일을 덮어쓰기 위함
-
             border: `1px solid ${lineGrey[200]}`,
             borderRadius: 'unset',
             boxShadow: 'none',
