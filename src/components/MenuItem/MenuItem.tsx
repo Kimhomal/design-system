@@ -4,10 +4,10 @@ import {
   menuItemClasses,
   MenuItemProps,
 } from '@mui/material';
-import { common, grey, insurBlue, lineGrey } from '../../system/colors';
+import { common, insurBlue } from '../../system/colors';
 import { deepmerge } from '../../utils';
 
-const Menu = (props: MenuItemProps) => {
+const MenuItem = (props: MenuItemProps) => {
   const { sx, ...rest } = props;
 
   return (
@@ -36,4 +36,4 @@ const Menu = (props: MenuItemProps) => {
   );
 };
 
-export default Menu;
+export default MenuItem;
