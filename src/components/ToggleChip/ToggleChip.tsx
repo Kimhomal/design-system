@@ -17,7 +17,7 @@ const ToggleChip = (props: ToggleButtonProps) => {
         {
           height: '26px',
           paddingInline: '14px',
-          fontSize: '12px',
+          fontSize: '14px',
           [`&.${toggleButtonClasses.root}:not(.${toggleButtonClasses.selected})`]:
             {
               marginLeft: 0,

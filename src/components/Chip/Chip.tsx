@@ -91,7 +91,7 @@ const Chip = (props: ChipProps & ChipType) => {
         {
           height: '26px',
           paddingInline: '14px',
-          fontSize: '12px',
+          fontSize: '14px',
           [`& .${chipClasses.label}`]: {
             padding: 0,
           },
