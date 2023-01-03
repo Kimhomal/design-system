@@ -1,6 +1,6 @@
 # Insurparts React Components Library
 
-[Insurparts UI docs 바로가기](https://62fdf76586470e80b0a42114-wigzzoejxu.chromatic.com)
+[Insurparts UI docs 바로가기](https://62fdf76586470e80b0a42114-rjbcujehbn.chromatic.com)
 
 ## `npm run rollup`
 
