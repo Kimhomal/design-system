@@ -5,6 +5,6 @@ import Select from './Select';
 
 describe('Select', () => {
   test('renders the Select component', () => {
-    render(<Select value="선택" />);
+    render(<Select value="" />);
   });
 });
