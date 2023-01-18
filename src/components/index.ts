@@ -22,3 +22,5 @@ export { default as Switch } from './Switch';
 export { default as Select } from './Select';
 
 export { default as MenuItem } from './MenuItem';
+
+export { default as TextField } from './TextField';
