@@ -16,7 +16,6 @@ type TextFieldProps = MuiTextFieldProps & { showSearchIcon?: boolean };
 const TextField = (props: TextFieldProps) => {
   const {
     type,
-    sx,
     InputProps,
     showSearchIcon,
     inputProps,
@@ -35,7 +34,6 @@ const TextField = (props: TextFieldProps) => {
   return (
     <MuiTextField
       type={type || 'search'}
-      sx={deepmerge({}, sx)}
       InputProps={{
         sx: deepmerge(
           {
