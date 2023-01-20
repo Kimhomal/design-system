@@ -16,7 +16,7 @@ type AgentStatus = 'active' | 'deactive';
 type AgentType = 'parts' | 'repairshop' | 'insurance' | 'selfclaim';
 
 type ChipType = {
-  type?: RequestStatus & AgentStatus & AgentType;
+  type?: RequestStatus | AgentStatus | AgentType;
 };
 
 const Chip = (props: ChipProps & ChipType) => {
@@ -113,7 +113,6 @@ const Chip = (props: ChipProps & ChipType) => {
               backgroundColor: common.white,
             },
           },
-
           backgroundColor: backgroundColor(type),
           color: textColor(type),
         },

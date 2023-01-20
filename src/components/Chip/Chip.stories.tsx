@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { IuiThemeProvider } from '../../system';
 import { COMPONENTS_TITLE, INPUTS_TITLE } from '../../constants';
 import Chip from './Chip';
-import { Stack } from '@mui/material';
+import { Divider, Stack } from '@mui/material';
 
 export default {
   title: `${COMPONENTS_TITLE}/${INPUTS_TITLE}/Chip`,
@@ -18,6 +18,15 @@ const ChipTehmplate: ComponentStory<typeof Chip> = (args) => {
   return (
     <IuiThemeProvider mode="admin">
       <Stack spacing={2}>
+        <Stack direction="row" spacing={1}>
+          <Chip
+            label="기본"
+            clickable={false}
+            onClick={handleClick}
+            {...args}
+          />
+        </Stack>
+        <Divider />
         <Stack direction="row" spacing={1}>
           <Chip
             label="연결중"
