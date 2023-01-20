@@ -101,8 +101,7 @@ const TextField = (props: TextFieldProps) => {
                 &::-webkit-search-results-decoration`]: {
                 width: 20,
                 height: 20,
-                backgroundImage: clearSvgUrl,
-                opacity: (255 - 143) / 255, // rgb(143, 143, 143) = #8f8f8f = grey[400]
+                backgroundImage: clearButtonSvgUrl,
                 cursor: 'pointer',
               },
             },
@@ -136,4 +135,5 @@ const TextField = (props: TextFieldProps) => {
 
 export default TextField;
 
-const clearSvgUrl = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.6668 4.67611L15.324 3.33325L10.0002 8.65706L4.67635 3.33325L3.3335 4.67611L8.65731 9.99992L3.3335 15.3237L4.67635 16.6666L10.0002 11.3428L15.324 16.6666L16.6668 15.3237L11.343 9.99992L16.6668 4.67611Z" /></svg>')`;
+const urlEncodedColor = encodeURIComponent(grey[400]);
+const clearButtonSvgUrl = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.6668 4.67611L15.324 3.33325L10.0002 8.65706L4.67635 3.33325L3.3335 4.67611L8.65731 9.99992L3.3335 15.3237L4.67635 16.6666L10.0002 11.3428L15.324 16.6666L16.6668 15.3237L11.343 9.99992L16.6668 4.67611Z" fill="${urlEncodedColor}"/></svg>')`;
