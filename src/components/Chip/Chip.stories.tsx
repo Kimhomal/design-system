@@ -20,21 +20,6 @@ const ChipTehmplate: ComponentStory<typeof Chip> = (args) => {
       <Stack spacing={2}>
         <Stack direction="row" spacing={1}>
           <Chip
-            label="배송예정일"
-            color="primary"
-            onClick={handleClick}
-            {...args}
-          />
-          <Chip
-            label="사고차량 입고일"
-            variant="outlined"
-            onClick={handleClick}
-            {...args}
-          />
-        </Stack>
-
-        <Stack direction="row" spacing={1}>
-          <Chip
             label="연결중"
             clickable={false}
             type="request"
@@ -112,6 +97,13 @@ const ChipTehmplate: ComponentStory<typeof Chip> = (args) => {
             label="보험사"
             clickable={false}
             type="insurance"
+            onClick={handleClick}
+            {...args}
+          />
+          <Chip
+            label="셀프"
+            clickable={false}
+            type="selfclaim"
             onClick={handleClick}
             {...args}
           />

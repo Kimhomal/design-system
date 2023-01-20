@@ -13,7 +13,7 @@ type RequestStatus =
 
 type AgentStatus = 'active' | 'deactive';
 
-type AgentType = 'parts' | 'repairshop' | 'insurance';
+type AgentType = 'parts' | 'repairshop' | 'insurance' | 'selfclaim';
 
 type ChipType = {
   type?: RequestStatus & AgentStatus & AgentType;
@@ -53,6 +53,8 @@ const Chip = (props: ChipProps & ChipType) => {
         return '#FFEFEF';
       case 'insurance':
         return '#EAFEF0';
+      case 'selfclaim':
+        return '#00864B';
     }
   }
 
@@ -82,6 +84,8 @@ const Chip = (props: ChipProps & ChipType) => {
         return '#FF0400';
       case 'insurance':
         return '#00864B';
+      case 'selfclaim':
+        return '#FFF';
     }
   }
 
@@ -89,8 +93,10 @@ const Chip = (props: ChipProps & ChipType) => {
     <MuiChip
       sx={deepmerge(
         {
-          height: '26px',
-          paddingInline: '14px',
+          minWidth: '72px',
+          height: '24px',
+          paddingInline: '10px',
+          paddingBlock: '2px',
           fontSize: '14px',
           [`& .${chipClasses.label}`]: {
             padding: 0,
