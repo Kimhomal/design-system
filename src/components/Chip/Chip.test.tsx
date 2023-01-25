@@ -3,8 +3,8 @@ import { render } from '@testing-library/react';
 
 import Chip from './Chip';
 
-describe('Chipt', () => {
-  test('renders the Chipt component', () => {
+describe('Chip', () => {
+  test('renders the Chip component', () => {
     render(<Chip label="label" />);
   });
 });
