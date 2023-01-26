@@ -9,8 +9,8 @@ import { deepmerge } from '../../utils';
 import ArrowBack from '../../icons/ArrowBack';
 import ArrowFoward from '../../icons/ArrowForward';
 
-const Pagination = (props: PaginationItemProps) => {
-  const { sx, ...rest } = props;
+const PaginationItem = (props: PaginationItemProps) => {
+  const { sx, components, ...rest } = props;
 
   return (
     <MuiPaginationItem
@@ -30,13 +30,16 @@ const Pagination = (props: PaginationItemProps) => {
         },
         sx
       )}
-      components={{
-        previous: () => <ArrowBack sx={{ color: grey[600] }} />,
-        next: () => <ArrowFoward sx={{ color: grey[600] }} />,
-      }}
+      components={deepmerge(
+        {
+          previous: () => <ArrowBack sx={{ color: grey[600] }} />,
+          next: () => <ArrowFoward sx={{ color: grey[600] }} />,
+        },
+        components
+      )}
       {...rest}
     />
   );
 };
 
-export default Pagination;
+export default PaginationItem;
