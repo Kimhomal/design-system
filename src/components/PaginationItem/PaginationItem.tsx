@@ -18,6 +18,7 @@ const PaginationItem = (props: PaginationItemProps) => {
       sx={deepmerge(
         {
           ...typography.body2_m,
+          color: grey[400],
           [`&.${paginationItemClasses.previousNext}`]: {
             '& svg': {
               color: grey[600],
