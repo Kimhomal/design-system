@@ -98,6 +98,8 @@ const Chip = (props: ChipProps & ChipType) => {
           paddingInline: '10px',
           paddingBlock: '2px',
           fontSize: '14px',
+          fontWeight: 500,
+          lineHeight: '20px',
           [`& .${chipClasses.label}`]: {
             padding: 0,
           },
