@@ -28,3 +28,7 @@ export { default as TextField } from './TextField';
 export { default as Pagination } from './Pagination';
 
 export { default as PaginationItem } from './PaginationItem';
+
+export { default as MessageDialog } from './MessageDialog';
+
+export { default as ContentDialog } from './ContentDialog';
