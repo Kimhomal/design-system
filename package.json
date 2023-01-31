@@ -1,6 +1,6 @@
 {
   "name": "@insurparts-team/ui",
-  "version": "0.0.32-rc.0",
+  "version": "0.0.32-rc.1",
   "description": "Insurpart React Components Library",
   "scripts": {
     "rollup": "rollup -c",
@@ -79,6 +79,5 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/insurparts-team"
   },
-  "readme": "ERROR: No README data found!",
-  "_id": "@insurparts-team/ui@0.0.6"
+  "readme": "ERROR: No README data found!"
 }
