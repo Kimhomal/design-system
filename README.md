@@ -92,7 +92,7 @@ npm version major|minor|patch
 
 ```sh
 # 개발 환경 (rc)
-npm version prerelease --preid="rc"
+npm version prerelease --preid rc
 ```
 
 ### 패키지 업로드
