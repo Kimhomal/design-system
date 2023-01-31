@@ -2,11 +2,13 @@ import React from 'react';
 import {
   inputBaseClasses,
   menuClasses,
+  menuItemClasses,
   Select as MuiSelect,
   selectClasses,
   SelectProps,
 } from '@mui/material';
 import { grey, insurBlue, lineGrey } from '../../system/colors';
+import typography from '../../system/typography';
 import { deepmerge } from '../../utils';
 import DropDown from '../../icons/DropDown';
 
@@ -21,7 +23,6 @@ const Select = (props: SelectProps) => {
         {
           width: '160px',
           borderRadius: 'unset',
-          fontSize: '14px',
           fieldset: {
             borderColor: lineGrey[200],
           },
@@ -33,6 +34,8 @@ const Select = (props: SelectProps) => {
           },
           [`&& .${selectClasses.select}.${inputBaseClasses.input}`]: {
             paddingLeft: '10px',
+            paddingBlock: '8px',
+            ...typography.body2_r,
           },
           [`& .${selectClasses.icon}`]: {
             right: '10px',
@@ -48,6 +51,14 @@ const Select = (props: SelectProps) => {
             boxShadow: 'none',
             [`.${menuClasses.list}`]: {
               padding: 0,
+            },
+          },
+        },
+        MenuListProps: {
+          sx: {
+            [`.${menuItemClasses.root}`]: {
+              paddingBlock: '8px',
+              ...typography.body2_r,
             },
           },
         },

@@ -57,11 +57,13 @@ const typography = {
     fontSize: 14,
     fontWeight: 500,
     lineHeight: '20px',
+    letterSpacing: -0.03,
   },
   body2_r: {
     fontSize: 14,
     fontWeight: 400,
     lineHeight: '20px',
+    letterSpacing: -0.03,
   },
   caption1_m: {
     fontSize: 12,
