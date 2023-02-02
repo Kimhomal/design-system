@@ -9,7 +9,7 @@ Insurparts React Components Library
 </div>
 
 - [선행 작업](#선행-작업)
-  - [패키지 사용 또는 배포를 위한 권한 취득](#패키지-사용-또는-배포를-위한-권한-취득)
+  - [🔓 패키지 사용 또는 배포를 위한 권한 취득](#-패키지-사용-또는-배포를-위한-권한-취득)
 - [설치](#설치)
 - [실행](#실행)
 - [테스트](#테스트)
@@ -17,7 +17,7 @@ Insurparts React Components Library
 - [번들링](#번들링)
 - [배포](#배포)
   - [버전 관리](#버전-관리)
-  - [패키지 업로드](#패키지-업로드)
+  - [패키지 게시](#패키지-게시)
 - [📦 사용](#-사용)
   - [최신 버전](#최신-버전)
   - [특정 버전](#특정-버전)
@@ -30,7 +30,7 @@ Insurparts React Components Library
 <details>
 <summary>
 
-### 패키지 사용 또는 배포를 위한 권한 취득
+### 🔓 패키지 사용 또는 배포를 위한 권한 취득
 
 </summary>
 
@@ -135,6 +135,8 @@ npm run rollup
 
 ### 버전 관리
 
+npm에서 제공하는 [version](https://docs.npmjs.com/cli/v9/commands/npm-version) 커맨드를 사용해 버전을 쉽게 관리할 수 있습니다.
+
 운영 환경 버전을 올릴 때, 변경 사항에 따라 major/minor/patch 중 하나의 옵션을 선택합니다.
 
 - major: 1.0.0 → 2.0.0
@@ -153,7 +155,9 @@ npm version major|minor|patch
 npm version prerelease --preid rc
 ```
 
-### 패키지 업로드
+### 패키지 게시
+
+npm에서 제공하는 [publish](https://docs.npmjs.com/cli/v8/commands/npm-publish) 커맨드를 사용해 패키지를 게시할 수 있습니다.
 
 운영 환경으로 배포할 때, 자동으로 latest 태그가 지정됩니다.
 
@@ -197,3 +201,4 @@ npm install|upgrade @insurparts-team/ui@0.0.33-rc.0
 - [How to Create and Publish a React Component Library](https://dev.to/alexeagleson/how-to-create-and-publish-a-react-component-library-2oe#publishing-your-library)
 - [Build And Publish A React Component Library](https://www.youtube.com/watch?v=hf6Z8OZanec)
 - [GitHub Packages로 npm 패키지 배포](https://min9nim.vercel.app/2021-05-17-github-packages)
+- [Packages - GitHub Docs](https://docs.github.com/en/rest/packages?apiVersion=2022-11-28)
