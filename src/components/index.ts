@@ -32,3 +32,5 @@ export { default as PaginationItem } from './PaginationItem';
 export { default as MessageDialog } from './MessageDialog';
 
 export { default as ContentDialog } from './ContentDialog';
+
+export { default as Checkbox } from './Checkbox';
