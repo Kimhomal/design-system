@@ -122,6 +122,9 @@ const modes: Record<ThemeMode, ThemeOptions> = {
       MuiFormControlLabel: {
         styleOverrides: {
           root: ({ ownerState, theme }) => ({
+            [`.${formControlLabelClasses.label}`]: {
+              ...theme.typography.body2_r,
+            },
             ...(ownerState.disabled && {
               [`&& .${formControlLabelClasses.label}`]: {
                 color: theme.palette.blueGrey[600],
