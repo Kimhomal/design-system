@@ -70,3 +70,5 @@ declare module '@mui/material/Typography' {
     caption1_r: true;
   }
 }
+
+export {};
