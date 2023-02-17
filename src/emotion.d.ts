@@ -1,5 +1,5 @@
 import '@emotion/react';
-import { Theme as iuiTheme } from './system/createTheme/createTheme';
+import iuiTheme from './system/createIuiTheme';
 
 declare module '@emotion/react' {
   export interface Theme extends iuiTheme {}
