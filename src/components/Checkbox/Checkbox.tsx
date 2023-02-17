@@ -15,6 +15,7 @@ const Checkbox = (props: CheckboxProps) => {
   return (
     <MuiCheckbox
       size="small"
+      disableRipple
       icon={<CheckboxUnChecked />}
       checkedIcon={<CheckboxChecked />}
       sx={deepmerge(
