@@ -11,7 +11,7 @@ type RequestStatus =
   | 'billComplete'
   | 'canceled';
 
-type AgentStatus = 'active' | 'deactive';
+type AgentStatus = 'active' | 'deactive' |'pendingapproval';
 
 type AgentType = 'parts' | 'repairshop' | 'insurance' | 'selfclaim';
 
@@ -46,6 +46,8 @@ const Chip = (props: ChipProps & ChipType) => {
         return '#DCEBFF';
       case 'deactive':
         return '#D1D6DB';
+      case 'pendingapproval':
+        return '#1D2474';
       // 업체 타입
       case 'parts':
         return '#EDF3FF';
@@ -77,6 +79,8 @@ const Chip = (props: ChipProps & ChipType) => {
         return '#0046A5';
       case 'deactive':
         return '#6B7684';
+      case 'pendingapproval':
+        return '#FFF'
       // 업체 타입
       case 'parts':
         return '#3B69E6';
