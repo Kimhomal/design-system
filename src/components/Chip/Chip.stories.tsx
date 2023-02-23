@@ -86,6 +86,13 @@ const ChipTehmplate: ComponentStory<typeof Chip> = (args) => {
             onClick={handleClick}
             {...args}
           />
+         <Chip
+            label="승인대기"
+            clickable={false}
+            type="pendingapproval"
+            onClick={handleClick}
+            {...args}
+          />
         </Stack>
         <Stack direction="row" spacing={1}>
           <Chip
