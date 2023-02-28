@@ -18,6 +18,7 @@ Insurparts React Components Library
 - [배포](#배포)
   - [버전 관리](#버전-관리)
   - [패키지 게시](#패키지-게시)
+  - [소스 관리](#소스-관리)
 - [📦 사용](#-사용)
   - [최신 버전](#최신-버전)
   - [특정 버전](#특정-버전)
@@ -137,6 +138,8 @@ npm run rollup
 
 npm에서 제공하는 [version](https://docs.npmjs.com/cli/v9/commands/npm-version) 커맨드를 사용해 버전을 쉽게 관리할 수 있습니다.
 
+> 운영 환경이든 개발 환경이든 상관 없이 항상 develop 브랜치에서 버전을 관리합니다.
+
 운영 환경 버전을 올릴 때, 변경 사항에 따라 major/minor/patch 중 하나의 옵션을 선택합니다.
 
 - major: 1.0.0 → 2.0.0
@@ -172,6 +175,16 @@ npm publish
 # 개발 환경 (next)
 npm publish --tag next
 ```
+
+### 소스 관리
+
+모든 작업이 완료되면 develop 브랜치에 현재까지 작업한 소스와 태그를 push 합니다.
+
+```sh
+git push --tags
+```
+
+이어서 master 브랜치로 이동해 develop 브랜치를 merge하고 소스를 push 합니다.
 
 ## 📦 사용
 
