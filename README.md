@@ -151,7 +151,7 @@ npm에서 제공하는 [version](https://docs.npmjs.com/cli/v9/commands/npm-vers
 npm version major|minor|patch
 ```
 
-개발 환경 버전을 올릴 때, prerelease 옵션을 사용합니다. preid는 최초 한 번만 설정하면 됩니다.
+개발 환경 버전을 올릴 때, prerelease 옵션을 사용합니다. preid는 버전을 올릴 때마다 최초 한 번만 설정하면 됩니다.
 
 ```sh
 # 개발 환경 (rc)
