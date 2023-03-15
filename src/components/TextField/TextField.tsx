@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
   TextField as MuiTextField,
   TextFieldProps as MuiTextFieldProps,
@@ -7,9 +8,10 @@ import {
   outlinedInputClasses,
   InputAdornment,
 } from '@mui/material';
+
+import Search from '../../icons/Search';
 import { blueGrey, grey, insurBlue, lineGrey, red } from '../../system/colors';
 import { deepmerge } from '../../utils';
-import Search from '../../icons/Search';
 
 type TextFieldProps = MuiTextFieldProps & { showSearchIcon?: boolean };
 

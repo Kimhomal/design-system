@@ -1,9 +1,12 @@
 import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { IuiThemeProvider } from '../../system';
-import { COMPONENTS_TITLE, INPUTS_TITLE } from '../../constants';
-import Chip from './Chip';
+
 import { Divider, Stack } from '@mui/material';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+
+import { COMPONENTS_TITLE, INPUTS_TITLE } from '../../constants';
+import { IuiThemeProvider } from '../../system';
+
+import Chip from './Chip';
 
 export default {
   title: `${COMPONENTS_TITLE}/${INPUTS_TITLE}/Chip`,
@@ -86,7 +89,7 @@ const ChipTehmplate: ComponentStory<typeof Chip> = (args) => {
             onClick={handleClick}
             {...args}
           />
-         <Chip
+          <Chip
             label="승인대기"
             clickable={false}
             type="pendingapproval"

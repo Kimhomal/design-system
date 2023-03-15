@@ -1,8 +1,11 @@
 import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+
 import { FormControl, FormControlLabel } from '@mui/material';
-import { IuiThemeProvider } from '../../system';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+
 import { COMPONENTS_TITLE, INPUTS_TITLE } from '../../constants';
+import { IuiThemeProvider } from '../../system';
+
 import Checkbox from './Checkbox';
 
 export default {

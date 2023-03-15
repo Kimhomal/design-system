@@ -1,21 +1,21 @@
 import { deepmerge } from '../../utils';
 
-export type PaletteMode = 'admin' | 'self';
+export interface Palette {
+  mode: PaletteMode;
+  primary: PaletteColor;
+  status: StatusColor;
+}
 
 export interface PaletteColor {
   main: string;
 }
 
+export type PaletteMode = 'admin' | 'self';
+
+export type PaletteOptions = Partial<Palette>;
+
 export interface StatusColor {
   error: string;
-}
-
-export interface PaletteOptions extends Partial<Palette> {}
-
-export interface Palette {
-  mode: PaletteMode;
-  primary: PaletteColor;
-  status: StatusColor;
 }
 
 function getDefaultPrimary(mode: PaletteMode = 'admin'): PaletteColor {

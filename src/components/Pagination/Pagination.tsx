@@ -1,12 +1,14 @@
 import React from 'react';
+
 import {
   Pagination as MuiPagination,
   paginationClasses,
   paginationItemClasses,
   PaginationProps,
 } from '@mui/material';
-import PaginationItem from '../PaginationItem';
+
 import { deepmerge } from '../../utils';
+import PaginationItem from '../PaginationItem';
 
 const Pagination = (props: PaginationProps) => {
   const { sx, ...rest } = props;

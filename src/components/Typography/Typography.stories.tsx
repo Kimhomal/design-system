@@ -1,6 +1,8 @@
 // import { ThemeProvider } from '@emotion/react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
+
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+
 import { COMPONENTS_TITLE, DISPLAY_TITLE } from '../../constants';
 import { IuiThemeProvider } from '../../system';
 

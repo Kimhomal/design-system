@@ -1,4 +1,5 @@
 import React, { MouseEvent } from 'react';
+
 import {
   Box,
   Dialog as MuiDialog,
@@ -7,9 +8,10 @@ import {
   DialogContent,
   DialogProps as MuiDialogProps,
 } from '@mui/material';
+
+import { deepmerge } from '../../utils';
 import Button from '../Button';
 import Typography from '../Typography';
-import { deepmerge } from '../../utils';
 
 type MessageDialogProps = MuiDialogProps & {
   message: string;

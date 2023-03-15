@@ -1,10 +1,12 @@
 import React from 'react';
+
 import {
   ToggleButton as MuiToggleButton,
   toggleButtonClasses,
   toggleButtonGroupClasses,
   ToggleButtonProps,
 } from '@mui/material';
+
 import { blueGrey, common, insurBlue } from '../../system/colors';
 import { deepmerge } from '../../utils';
 

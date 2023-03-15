@@ -1,8 +1,11 @@
 import React, { MouseEvent, useState } from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+
 import { ToggleButtonGroup } from '@mui/material';
-import { IuiThemeProvider } from '../../system';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+
 import { COMPONENTS_TITLE, INPUTS_TITLE } from '../../constants';
+import { IuiThemeProvider } from '../../system';
+
 import ToggleButton from './ToggleButton';
 
 export default {

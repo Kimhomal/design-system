@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+
 import { Theme } from '../createTheme/createTheme';
 import useTheme from '../useTheme';
 import ThemeContext from '../useTheme/ThemeContext';
@@ -20,7 +21,7 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({
   const outerTheme = useTheme();
 
   const theme = useMemo(() => {
-    let output: Theme =
+    const output: Theme =
       outerTheme === null
         ? localTheme
         : mergeOuterLocalTheme(outerTheme, localTheme);

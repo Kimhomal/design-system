@@ -1,11 +1,14 @@
 import React from 'react';
+
+import { Box } from '@mui/material';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+
 import { COMPONENTS_TITLE, INPUTS_TITLE } from '../../constants';
-import Button, { IuiButtonProps } from './Button';
-import IuiThemeProvider from '../../system/IuiThemeProvider';
 import ChevronRightIcon from '../../icons/ChevronRight';
 import RefreshIcon from '../../icons/Refresh';
-import { Box } from '@mui/material';
+import IuiThemeProvider from '../../system/IuiThemeProvider';
+
+import Button, { IuiButtonProps } from './Button';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -43,16 +46,15 @@ const LabelWithIconTemplate: ComponentStory<typeof Button> = (args) => {
   );
 };
 
-export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-  variant: 'contained',
-  color: 'primary',
-};
-
 export const LabelWithIcon = LabelWithIconTemplate.bind({});
+export const Primary = Template.bind({});
 LabelWithIcon.args = {
   variant: 'outlined',
   color: 'secondary',
   iconsize: 20,
+};
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+Primary.args = {
+  variant: 'contained',
+  color: 'primary',
 };

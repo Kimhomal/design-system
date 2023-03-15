@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+
 import {
   Box,
   Dialog as MuiDialog,
@@ -9,10 +10,11 @@ import {
   DialogTitle,
   ModalProps,
 } from '@mui/material';
-import Typography from '../Typography';
-import { deepmerge } from '../../utils';
+
 import Close from '../../icons/Close';
 import { grey, lineGrey } from '../../system/colors';
+import { deepmerge } from '../../utils';
+import Typography from '../Typography';
 
 type Reason = ModalProps['onClose'] | 'buttonClick';
 

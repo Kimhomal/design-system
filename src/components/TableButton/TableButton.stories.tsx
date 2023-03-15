@@ -1,10 +1,13 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { COMPONENTS_TITLE, INPUTS_TITLE } from '../../constants';
-import TableButton from './TableButton';
-import IuiThemeProvider from '../../system/IuiThemeProvider';
-import RightArrowIcon from '../../icons/RightArrow';
+
 import { ButtonProps } from '@mui/material';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+
+import { COMPONENTS_TITLE, INPUTS_TITLE } from '../../constants';
+import RightArrowIcon from '../../icons/RightArrow';
+import IuiThemeProvider from '../../system/IuiThemeProvider';
+
+import TableButton from './TableButton';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

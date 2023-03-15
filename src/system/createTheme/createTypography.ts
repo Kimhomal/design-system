@@ -1,34 +1,11 @@
 import React from 'react';
+
 import * as CSS from 'csstype';
+
 import { deepmerge } from '../../utils';
 
-export type Variant =
-  | 'header'
-  | 'title'
-  | 'subtitle'
-  | 'body1'
-  | 'body2'
-  | 'caption1';
+export type BaseCSSProperties = NormalCssProperties;
 
-export type Weight = 'bold' | 'medium' | 'regular' | 'default';
-
-export interface FontStyle
-  extends Required<{
-    fontFamily: React.CSSProperties['fontFamily'];
-    fontSize: React.CSSProperties['fontSize'];
-  }> {}
-
-export interface FontStyleOptions extends Partial<FontStyle> {
-  allVariants?: React.CSSProperties;
-}
-
-export type NormalCssProperties = CSS.Properties<number | string>;
-export type Fontface = CSS.AtRule.FontFace & {
-  fallbacks?: CSS.AtRule.FontFace[];
-};
-export interface BaseCSSProperties extends NormalCssProperties {
-  // '@font-face'?: Fontface | Fontface[];
-}
 export interface CSSProperties extends BaseCSSProperties {
   // Allow pseudo selectors and media queries
   // `unknown` is used since TS does not allow assigning an interface without
@@ -41,18 +18,39 @@ export interface CSSProperties extends BaseCSSProperties {
   [k: string]: unknown | CSSProperties;
 }
 
-export type TypographyStyle = CSSProperties;
-export interface TypographyStyleOptions extends TypographyStyle {}
+export type FontStyle = Required<{
+  fontFamily: React.CSSProperties['fontFamily'];
+  fontSize: React.CSSProperties['fontSize'];
+}>;
 
+export interface FontStyleOptions extends Partial<FontStyle> {
+  allVariants?: React.CSSProperties;
+}
+
+export type Fontface = CSS.AtRule.FontFace & {
+  fallbacks?: CSS.AtRule.FontFace[];
+};
+export type NormalCssProperties = CSS.Properties<number | string>;
 export interface Typography
   extends Record<Variant, Partial<Record<Weight, TypographyStyle>>>,
     FontStyle {}
+export type TypographyOptions = Partial<
+  Record<Variant, Partial<Record<Weight, TypographyStyleOptions>>> &
+    FontStyleOptions
+>;
 
-export interface TypographyOptions
-  extends Partial<
-    Record<Variant, Partial<Record<Weight, TypographyStyleOptions>>> &
-      FontStyleOptions
-  > {}
+export type TypographyStyle = CSSProperties;
+export type TypographyStyleOptions = TypographyStyle;
+
+export type Variant =
+  | 'header'
+  | 'title'
+  | 'subtitle'
+  | 'body1'
+  | 'body2'
+  | 'caption1';
+
+export type Weight = 'bold' | 'medium' | 'regular' | 'default';
 
 export const defaultTypography: Record<
   Variant,
@@ -159,7 +157,7 @@ const createTypography = (typography: TypographyOptions): Typography => {
     fontFamily,
     fontWeight,
     fontSize: size,
-    lineHeight: lineHeight + 'px',
+    lineHeight: `${lineHeight}px`,
     letterSpacing,
     ...allVariants,
   });

@@ -1,8 +1,11 @@
 import React, { ChangeEvent, useState } from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+
 import { FormControl, FormControlLabel, RadioGroup } from '@mui/material';
-import { IuiThemeProvider } from '../../system';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+
 import { COMPONENTS_TITLE, INPUTS_TITLE } from '../../constants';
+import { IuiThemeProvider } from '../../system';
+
 import Radio from './Radio';
 
 export default {

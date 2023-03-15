@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+
 import { Stack } from '@mui/material';
-import { IuiThemeProvider } from '../../system';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+
 import { COMPONENTS_TITLE, INPUTS_TITLE } from '../../constants';
-import MessageDialog from './MessageDialog';
+import { IuiThemeProvider } from '../../system';
 import Button from '../Button';
 import Typography from '../Typography';
+
+import MessageDialog from './MessageDialog';
 
 export default {
   title: `${COMPONENTS_TITLE}/${INPUTS_TITLE}/MessageDialog`,
