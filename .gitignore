@@ -3,3 +3,6 @@ dist
 build-storybook.log
 
 yarn-error.log*
+
+# misc
+.DS_Store

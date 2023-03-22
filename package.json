@@ -8,6 +8,7 @@
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-aws-s3 --bucket-path=iui.insurparts.com",
     "chromatic": "npx chromatic --project-token=ebffb6fb9bee",
     "prepare": "if test \"$NODE_ENV\" != \"production\" ; then husky install ; fi"
   },
@@ -45,6 +46,7 @@
     "@storybook/builder-webpack4": "^6.5.12",
     "@storybook/manager-webpack4": "^6.5.12",
     "@storybook/react": "^6.5.12",
+    "@storybook/storybook-deployer": "^2.8.16",
     "@storybook/testing-library": "^0.0.13",
     "@testing-library/react": "^12.1.5",
     "@types/jest": "^28.1.8",
