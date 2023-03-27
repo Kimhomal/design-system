@@ -192,9 +192,6 @@ git push --tags
 ### Storybook deploy to aws s3
 Storybook을 AWS S3를 통해 Static URL로 배포
 ```sh
-# build storybook
-npm run build-storybook
-
 # deploy storybook to aws s3
 npm run deploy-storybook
 ```
