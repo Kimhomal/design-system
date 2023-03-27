@@ -219,6 +219,7 @@ export default {
   },
 } as ComponentMeta<typeof Button>;
 ```
+![스크린샷 2023-03-27 오후 2 31 30](https://user-images.githubusercontent.com/95343346/227849283-07bad907-f79e-4880-897c-a898be520c61.png)
 
 ## 📦 사용
 
