@@ -56,6 +56,8 @@
     "babel-jest": "^28.1.3",
     "babel-loader": "^8.2.5",
     "chromatic": "^6.7.4",
+    "commitizen": "^4.3.0",
+    "cz-customizable": "^7.0.0",
     "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
@@ -98,5 +100,10 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "eslint --fix --cache --cache-location ./node_modules/.cache/.eslintcache",
     "*.{js,jsx,ts,tsx,json,css,md}": "prettier --write"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    }
   }
 }
