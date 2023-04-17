@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren, forwardRef } from 'react';
 
 import { Button as MuiButton, buttonClasses, ButtonProps } from '@mui/material';
 import { styled } from '@mui/material/styles';
@@ -12,30 +12,34 @@ const ButtonRoot = styled(MuiButton)<ButtonProps>(({ startIcon, endIcon }) => ({
   borderRadius: 0,
 }));
 
-const Button = (props: IuiButtonProps) => {
-  const resolveProps: IuiButtonProps = { ...props, disableElevation: true };
-  const styleOverride: ButtonProps = {
-    ...resolveProps,
-    ...(props.iconsize && {
-      sx: deepmerge(
-        {
-          [`& .${buttonClasses.endIcon}`]: {
-            '& > *:nth-of-type(1)': {
-              fontSize: props.iconsize,
+const Button = forwardRef<HTMLButtonElement, PropsWithChildren<IuiButtonProps>>(
+  (props: IuiButtonProps, ref) => {
+    const resolveProps: IuiButtonProps = { ...props, disableElevation: true };
+    const styleOverride: ButtonProps = {
+      ...resolveProps,
+      ...(props.iconsize && {
+        sx: deepmerge(
+          {
+            [`& .${buttonClasses.endIcon}`]: {
+              '& > *:nth-of-type(1)': {
+                fontSize: props.iconsize,
+              },
+            },
+            [`& .${buttonClasses.startIcon}`]: {
+              '& > *:nth-of-type(1)': {
+                fontSize: props.iconsize,
+              },
             },
           },
-          [`& .${buttonClasses.startIcon}`]: {
-            '& > *:nth-of-type(1)': {
-              fontSize: props.iconsize,
-            },
-          },
-        },
-        resolveProps.sx
-      ),
-    }),
-  };
+          resolveProps.sx
+        ),
+      }),
+    };
 
-  return <ButtonRoot {...styleOverride} />;
-};
+    return <ButtonRoot ref={ref} {...styleOverride} />;
+  }
+);
+
+Button.displayName = 'Button';
 
 export default Button;
