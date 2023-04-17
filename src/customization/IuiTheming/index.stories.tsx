@@ -1,8 +1,11 @@
+import React from 'react';
+
 import { useTheme } from '@mui/material/styles';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React from 'react';
-import IuiTheming from '.';
+
 import { CUSTOMIZATION_TITLE } from '../../constants';
+
+import IuiTheming from '.';
 
 export default {
   title: `${CUSTOMIZATION_TITLE}/IuiTheming`,

@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { Chip as MuiChip, chipClasses, ChipProps } from '@mui/material';
+
 import { blueGrey, common, insurBlue } from '../../system/colors';
 import { deepmerge } from '../../utils';
 
@@ -11,7 +13,7 @@ type RequestStatus =
   | 'billComplete'
   | 'canceled';
 
-type AgentStatus = 'active' | 'deactive' |'pendingapproval';
+type AgentStatus = 'active' | 'deactive' | 'pendingapproval';
 
 type AgentType = 'parts' | 'repairshop' | 'insurance' | 'selfclaim';
 
@@ -80,7 +82,7 @@ const Chip = (props: ChipProps & ChipType) => {
       case 'deactive':
         return '#6B7684';
       case 'pendingapproval':
-        return '#FFF'
+        return '#FFF';
       // 업체 타입
       case 'parts':
         return '#3B69E6';

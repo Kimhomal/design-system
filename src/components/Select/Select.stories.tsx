@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+
 import { FormControl, SelectChangeEvent, Stack } from '@mui/material';
-import { IuiThemeProvider } from '../../system';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+
 import { COMPONENTS_TITLE, INPUTS_TITLE } from '../../constants';
-import Select from './Select';
+import { IuiThemeProvider } from '../../system';
 import MenuItem from '../MenuItem';
+
+import Select from './Select';
 
 export default {
   title: `${COMPONENTS_TITLE}/${INPUTS_TITLE}/Select`,

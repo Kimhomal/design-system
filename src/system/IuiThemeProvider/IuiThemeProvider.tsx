@@ -1,6 +1,8 @@
+import React from 'react';
+
 import { CssBaseline } from '@mui/material';
 import { ThemeProvider } from '@mui/system';
-import React from 'react';
+
 import createIuiTheme, { ThemeMode } from '../createIuiTheme';
 
 interface IuiThemeProviderProps {

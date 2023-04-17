@@ -1,9 +1,12 @@
 import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { IuiThemeProvider } from '../../system';
-import { COMPONENTS_TITLE, INPUTS_TITLE } from '../../constants';
-import Switch from './Switch';
+
 import { Stack } from '@mui/system';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+
+import { COMPONENTS_TITLE, INPUTS_TITLE } from '../../constants';
+import { IuiThemeProvider } from '../../system';
+
+import Switch from './Switch';
 
 export default {
   title: `${COMPONENTS_TITLE}/${INPUTS_TITLE}/Switch`,

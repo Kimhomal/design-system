@@ -1,18 +1,19 @@
 import { deepmerge } from '../../utils';
+
 import createPalette, { Palette, PaletteOptions } from './createPalette';
 import createTypography, {
   Typography,
   TypographyOptions,
 } from './createTypography';
 
-export interface ThemeOptions {
-  palette?: PaletteOptions;
-  typography?: TypographyOptions;
-}
-
 export interface Theme {
   palette: Palette;
   typography: Typography;
+}
+
+export interface ThemeOptions {
+  palette?: PaletteOptions;
+  typography?: TypographyOptions;
 }
 
 const createTheme = (options: ThemeOptions = {}): Theme => {
@@ -22,7 +23,7 @@ const createTheme = (options: ThemeOptions = {}): Theme => {
     ...other
   } = options;
 
-  let iuiTheme = deepmerge(
+  const iuiTheme = deepmerge(
     {
       palette: createPalette(paletteInput),
       typography: createTypography(typographyInput),

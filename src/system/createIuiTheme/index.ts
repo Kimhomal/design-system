@@ -1,2 +1,2 @@
-export { default } from './createIuiTheme';
 export * from './createIuiTheme';
+export { default } from './createIuiTheme';

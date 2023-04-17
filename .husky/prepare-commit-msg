@@ -1,0 +1,19 @@
+#!/bin/sh
+COMMIT_MSG_FILE=$1
+COMMIT_SOURCE=$2
+SHA1=$3
+BRANCH_NAME=$(git branch | grep '*' | sed 's/* //')
+REBASE_NAME="no branch, rebasing"
+
+if [[ $BRANCH_NAME == *$REBASE_NAME* ]]; then
+  echo "prepare-commit-msg skip on rebase"
+  exit 0
+fi
+
+if [ "${COMMIT_SOURCE}" = merge ] || [ "${COMMIT_SOURCE}" = squash ] || [ "${COMMIT_SOURCE}" = commit ]; then
+  exit 0
+fi
+
+. "$(dirname -- "$0")/_/husky.sh"
+
+exec < /dev/tty && npx cz --hook || true

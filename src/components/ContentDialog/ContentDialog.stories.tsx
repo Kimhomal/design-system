@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+
 import { Box, Stack } from '@mui/material';
-import { IuiThemeProvider } from '../../system';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+
 import { COMPONENTS_TITLE, INPUTS_TITLE } from '../../constants';
-import ContentDialog from './ContentDialog';
+import { IuiThemeProvider } from '../../system';
+import { blueGrey } from '../../system/colors';
 import Button from '../Button';
 import Typography from '../Typography';
-import { blueGrey } from '../../system/colors';
+
+import ContentDialog from './ContentDialog';
 
 export default {
   title: `${COMPONENTS_TITLE}/${INPUTS_TITLE}/ContentDialog`,

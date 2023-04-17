@@ -1,13 +1,15 @@
 import React from 'react';
+
 import {
   Checkbox as MuiCheckbox,
   checkboxClasses,
   CheckboxProps,
 } from '@mui/material';
-import { blueGrey, lineGrey } from '../../system/colors';
-import { deepmerge } from '../../utils';
+
 import CheckboxChecked from '../../icons/CheckboxChecked';
 import CheckboxUnChecked from '../../icons/CheckboxUnChecked';
+import { blueGrey, lineGrey } from '../../system/colors';
+import { deepmerge } from '../../utils';
 
 const Checkbox = (props: CheckboxProps) => {
   const { sx, ...rest } = props;

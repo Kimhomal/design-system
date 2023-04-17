@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { render } from '@testing-library/react';
 
 import ContentDialog from './ContentDialog';
@@ -8,7 +9,9 @@ describe('ContentDialog', () => {
     render(
       <ContentDialog
         open={true}
-        onClose={() => {}}
+        onClose={(event) => {
+          console.log(event);
+        }}
         title="제목"
         content={<div>컨텐츠</div>}
       />

@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { SvgIcon, SvgIconProps } from '@mui/material';
+
 import { deepmerge } from '../utils';
 
 export default function Search(props: SvgIconProps) {

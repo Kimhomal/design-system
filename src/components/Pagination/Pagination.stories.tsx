@@ -1,9 +1,12 @@
 import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { IuiThemeProvider } from '../../system';
-import { COMPONENTS_TITLE, INPUTS_TITLE } from '../../constants';
-import Pagination from './Pagination';
+
 import { Stack } from '@mui/material';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+
+import { COMPONENTS_TITLE, INPUTS_TITLE } from '../../constants';
+import { IuiThemeProvider } from '../../system';
+
+import Pagination from './Pagination';
 
 export default {
   title: `${COMPONENTS_TITLE}/${INPUTS_TITLE}/Pagination`,

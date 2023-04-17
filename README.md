@@ -19,6 +19,9 @@ Insurparts React Components Library
   - [버전 관리](#버전-관리)
   - [패키지 게시](#패키지-게시)
   - [소스 관리](#소스-관리)
+  - [Storybook deploy to aws s3](#storybook-deploy-to-aws-s3)
+- [연동](#연동)
+  - [Figma](#figma)
 - [📦 사용](#-사용)
   - [최신 버전](#최신-버전)
   - [특정 버전](#특정-버전)
@@ -185,6 +188,35 @@ git push --tags
 ```
 
 이어서 master 브랜치로 이동해 develop 브랜치를 merge하고 소스를 push 합니다.
+
+### Storybook deploy to aws s3
+Storybook을 AWS S3를 통해 Static URL로 배포
+```sh
+# deploy storybook to aws s3
+npm run deploy-storybook
+```
+
+## 연동
+
+### Figma
+
+Storybook과 Figma를 연동하는 방법을 설명합니다. [storybook-addon-designs](https://storybookjs.github.io/addon-designs) 라이브러리를 사용합니다.
+
+```js
+// src > components > Button > Button.stories.tsx
+
+export default {
+  title: `${COMPONENTS_TITLE}/${INPUTS_TITLE}/Button`,
+  component: Button,
+  parameters: {
+    design: {
+      type: 'figma',
+      url: '%Your-figma-component-url%',
+    },
+  },
+} as ComponentMeta<typeof Button>;
+```
+![스크린샷 2023-03-27 오후 2 31 30](https://user-images.githubusercontent.com/95343346/227849283-07bad907-f79e-4880-897c-a898be520c61.png)
 
 ## 📦 사용
 

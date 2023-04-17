@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
   inputBaseClasses,
   menuClasses,
@@ -7,10 +8,11 @@ import {
   selectClasses,
   SelectProps,
 } from '@mui/material';
+
+import DropDown from '../../icons/DropDown';
 import { grey, insurBlue, lineGrey } from '../../system/colors';
 import typography from '../../system/typography';
 import { deepmerge } from '../../utils';
-import DropDown from '../../icons/DropDown';
 
 const Select = (props: SelectProps) => {
   const { sx, ...rest } = props;

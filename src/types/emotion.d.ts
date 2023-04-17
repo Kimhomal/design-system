@@ -1,6 +1,7 @@
 import '@emotion/react';
-import { Theme as iuiTheme } from '../system/createTheme/createTheme';
+import iuiTheme from './system/createIuiTheme';
 
 declare module '@emotion/react' {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
   export interface Theme extends iuiTheme {}
 }
