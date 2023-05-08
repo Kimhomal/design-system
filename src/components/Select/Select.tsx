@@ -18,7 +18,7 @@ const Select = (props: SelectProps) => {
   const { sx, MenuProps, ...rest } = props;
   const { PaperProps, MenuListProps } = MenuProps ?? {};
   const { sx: PaperPropsSx, ...PaperPropsRest } = PaperProps ?? {};
-  const { sx: MenuListPropssSx, ...MenuListPropsRest } = MenuListProps ?? {};
+  const { sx: MenuListPropsSx, ...MenuListPropsRest } = MenuListProps ?? {};
 
   return (
     <MuiSelect
@@ -67,7 +67,7 @@ const Select = (props: SelectProps) => {
               paddingBlock: '8px',
               ...typography.body2_r,
             },
-            ...MenuListPropssSx,
+            ...MenuListPropsSx,
           },
           ...MenuListPropsRest,
         },
