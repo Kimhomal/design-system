@@ -15,7 +15,10 @@ import typography from '../../system/typography';
 import { deepmerge } from '../../utils';
 
 const Select = (props: SelectProps) => {
-  const { sx, ...rest } = props;
+  const { sx, MenuProps, ...rest } = props;
+  const { PaperProps, MenuListProps } = MenuProps ?? {};
+  const { sx: PaperPropsSx, ...PaperPropsRest } = PaperProps ?? {};
+  const { sx: MenuListPropssSx, ...MenuListPropsRest } = MenuListProps ?? {};
 
   return (
     <MuiSelect
@@ -54,7 +57,9 @@ const Select = (props: SelectProps) => {
             [`.${menuClasses.list}`]: {
               padding: 0,
             },
+            ...PaperPropsSx,
           },
+          ...PaperPropsRest,
         },
         MenuListProps: {
           sx: {
@@ -62,7 +67,9 @@ const Select = (props: SelectProps) => {
               paddingBlock: '8px',
               ...typography.body2_r,
             },
+            ...MenuListPropssSx,
           },
+          ...MenuListPropsRest,
         },
       }}
       {...rest}
