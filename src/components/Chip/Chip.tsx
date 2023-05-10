@@ -11,7 +11,8 @@ type RequestStatus =
   | 'billWait'
   | 'vehicleRelease'
   | 'billComplete'
-  | 'canceled';
+  | 'canceled'
+  | 'giveUp';
 
 type AgentStatus = 'active' | 'deactive' | 'pendingapproval';
 
@@ -43,6 +44,8 @@ const Chip = (props: ChipProps & ChipType) => {
         return '#5280E2';
       case 'canceled':
         return '#FF0400';
+      case 'giveUp':
+        return '#FF4700';
       // 업체 상태
       case 'active':
         return '#DCEBFF';
@@ -75,6 +78,7 @@ const Chip = (props: ChipProps & ChipType) => {
       case 'vehicleRelease':
       case 'billComplete':
       case 'canceled':
+      case 'giveUp':
         return '#FFF';
       // 업체 상태
       case 'active':
