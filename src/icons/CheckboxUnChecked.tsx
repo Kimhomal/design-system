@@ -9,7 +9,7 @@ export default createSvgIcon(
       y="0.5"
       width="19"
       height="19"
-      fill="#FFF"
+      fill="currentColor"
       stroke="currentColor"
     />
   </svg>,
