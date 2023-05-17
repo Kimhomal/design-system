@@ -23,9 +23,21 @@ const Checkbox = (props: CheckboxProps) => {
       sx={deepmerge(
         {
           padding: '8px',
-          color: lineGrey[200],
+          color: '#FFF',
+          'svg rect': {
+            stroke: lineGrey[200],
+          },
           [`&.${checkboxClasses.disabled}`]: {
+            color: blueGrey[100],
+            'svg rect': {
+              stroke: lineGrey[200],
+            },
+          },
+          [`&.${checkboxClasses.checked}.${checkboxClasses.disabled}`]: {
             color: blueGrey[400],
+            'svg rect': {
+              stroke: blueGrey[400],
+            },
           },
         },
         sx

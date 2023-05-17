@@ -18,6 +18,7 @@ const StandAloneTemplate: ComponentStory<typeof Checkbox> = (args) => {
     <IuiThemeProvider mode="admin">
       <Checkbox {...args} />
       <Checkbox {...args} defaultChecked />
+      <Checkbox {...args} disabled />
       <Checkbox {...args} disabled checked />
     </IuiThemeProvider>
   );
@@ -33,6 +34,10 @@ const WithFormControlTemplate: ComponentStory<typeof Checkbox> = (args) => {
         />
         <FormControlLabel
           control={<Checkbox {...args} defaultChecked />}
+          label="공업사에서 타업체 연결 요청"
+        />
+        <FormControlLabel
+          control={<Checkbox {...args} disabled />}
           label="공업사에서 타업체 연결 요청"
         />
         <FormControlLabel
