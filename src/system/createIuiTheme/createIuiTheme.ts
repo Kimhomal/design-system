@@ -3,18 +3,6 @@ import { buttonClasses } from '@mui/material/Button';
 import { red as MuiRed } from '@mui/material/colors';
 import { createTheme, Theme, ThemeOptions, alpha } from '@mui/material/styles';
 
-import NotoSansKR500Eot from '../../fonts/noto-sans-kr-v27-korean-500.eot';
-import NotoSansKR500Svg from '../../fonts/noto-sans-kr-v27-korean-500.svg';
-import NotoSansKR500Woff from '../../fonts/noto-sans-kr-v27-korean-500.woff';
-import NotoSansKR500Woff2 from '../../fonts/noto-sans-kr-v27-korean-500.woff2';
-import NotoSansKR700Eot from '../../fonts/noto-sans-kr-v27-korean-700.eot';
-import NotoSansKR700Svg from '../../fonts/noto-sans-kr-v27-korean-700.svg';
-import NotoSansKR700Woff from '../../fonts/noto-sans-kr-v27-korean-700.woff';
-import NotoSansKR700Woff2 from '../../fonts/noto-sans-kr-v27-korean-700.woff2';
-import NotoSansKREot from '../../fonts/noto-sans-kr-v27-korean-regular.eot';
-import NotoSansKRSvg from '../../fonts/noto-sans-kr-v27-korean-regular.svg';
-import NotoSansKRWoff from '../../fonts/noto-sans-kr-v27-korean-regular.woff';
-import NotoSansKRWoff2 from '../../fonts/noto-sans-kr-v27-korean-regular.woff2';
 import { deepmerge } from '../../utils';
 import blueGrey from '../colors/blueGrey';
 import grey from '../colors/grey';
@@ -28,43 +16,6 @@ export type ThemeMode = 'admin' | 'self' | 'parts' | 'repair';
 const modes: Record<ThemeMode, ThemeOptions> = {
   admin: {
     components: {
-      MuiCssBaseline: {
-        styleOverrides: `
-          @font-face {
-            font-family: 'Noto Sans KR';
-            font-style: normal;
-            font-display: swap;
-            font-weight: 400;
-            src: local(''),
-              url(${NotoSansKRWoff2}) format('woff2'), /* Super Modern Browsers */
-              url(${NotoSansKRWoff}) format('woff'), /* Modern Browsers */
-              url(${NotoSansKRSvg}) format('svg'), /* Legacy iOS */
-              url(${NotoSansKREot}) format('embedded-opentype'); /* IE Compat Modes */
-          }
-          @font-face {
-            font-family: 'Noto Sans KR';
-            font-style: normal;
-            font-display: swap;
-            font-weight: 500;
-            src: local(''),
-              url(${NotoSansKR500Woff2}) format('woff2'),
-              url(${NotoSansKR500Woff}) format('woff'),
-              url(${NotoSansKR500Svg}) format('svg'),
-              url(${NotoSansKR500Eot}) format('embedded-opentype');
-          }
-          @font-face {
-            font-family: 'Noto Sans KR';
-            font-style: normal;
-            font-display: swap;
-            font-weight: 700;
-            src: local(''),
-              url(${NotoSansKR700Woff2}) format('woff2'),
-              url(${NotoSansKR700Woff}) format('woff'),
-              url(${NotoSansKR700Svg}) format('svg'),
-              url(${NotoSansKR700Eot}) format('embedded-opentype');
-          }
-        `,
-      },
       MuiButton: {
         styleOverrides: {
           root: ({ ownerState, theme }) => ({
