@@ -3,25 +3,24 @@ import { buttonClasses } from '@mui/material/Button';
 import { red as MuiRed } from '@mui/material/colors';
 import { createTheme, Theme, ThemeOptions, alpha } from '@mui/material/styles';
 
-import NotoSansKR500Eot from '/src/fonts/noto-sans-kr-v27-korean-500.eot';
-import NotoSansKR500Svg from '/src/fonts/noto-sans-kr-v27-korean-500.svg';
-import NotoSansKR500Woff from '/src/fonts/noto-sans-kr-v27-korean-500.woff';
-import NotoSansKR500Woff2 from '/src/fonts/noto-sans-kr-v27-korean-500.woff2';
-import NotoSansKR700Eot from '/src/fonts/noto-sans-kr-v27-korean-700.eot';
-import NotoSansKR700Svg from '/src/fonts/noto-sans-kr-v27-korean-700.svg';
-import NotoSansKR700Woff from '/src/fonts/noto-sans-kr-v27-korean-700.woff';
-import NotoSansKR700Woff2 from '/src/fonts/noto-sans-kr-v27-korean-700.woff2';
-import NotoSansKREot from '/src/fonts/noto-sans-kr-v27-korean-regular.eot';
-import NotoSansKRSvg from '/src/fonts/noto-sans-kr-v27-korean-regular.svg';
-import NotoSansKRWoff from '/src/fonts/noto-sans-kr-v27-korean-regular.woff';
-import NotoSansKRWoff2 from '/src/fonts/noto-sans-kr-v27-korean-regular.woff2';
-
 import { deepmerge } from '../../utils';
 import blueGrey from '../colors/blueGrey';
 import grey from '../colors/grey';
 import insurBlue from '../colors/insurBlue';
 import lineGrey from '../colors/lineGrey';
 import red from '../colors/red';
+import NotoSansKR500Eot from '../fonts/noto-sans-kr-v27-korean-500.eot';
+import NotoSansKR500Svg from '../fonts/noto-sans-kr-v27-korean-500.svg';
+import NotoSansKR500Woff from '../fonts/noto-sans-kr-v27-korean-500.woff';
+import NotoSansKR500Woff2 from '../fonts/noto-sans-kr-v27-korean-500.woff2';
+import NotoSansKR700Eot from '../fonts/noto-sans-kr-v27-korean-700.eot';
+import NotoSansKR700Svg from '../fonts/noto-sans-kr-v27-korean-700.svg';
+import NotoSansKR700Woff from '../fonts/noto-sans-kr-v27-korean-700.woff';
+import NotoSansKR700Woff2 from '../fonts/noto-sans-kr-v27-korean-700.woff2';
+import NotoSansKREot from '../fonts/noto-sans-kr-v27-korean-regular.eot';
+import NotoSansKRSvg from '../fonts/noto-sans-kr-v27-korean-regular.svg';
+import NotoSansKRWoff from '../fonts/noto-sans-kr-v27-korean-regular.woff';
+import NotoSansKRWoff2 from '../fonts/noto-sans-kr-v27-korean-regular.woff2';
 import typography from '../typography';
 
 export type ThemeMode = 'admin' | 'self' | 'parts' | 'repair';
