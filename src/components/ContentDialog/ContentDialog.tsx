@@ -6,9 +6,8 @@ import {
   DialogActions,
   dialogClasses,
   DialogContent,
-  DialogProps as MuiDialogProps,
+  DialogProps,
   DialogTitle,
-  ModalProps,
 } from '@mui/material';
 
 import Close from '../../icons/Close';
@@ -16,26 +15,19 @@ import { grey, lineGrey } from '../../system/colors';
 import { deepmerge } from '../../utils';
 import Typography from '../Typography';
 
-type Reason = ModalProps['onClose'] | 'buttonClick';
-
-type ContentDialogProps = MuiDialogProps & {
-  onClose: (reason: Reason) => void; // props의 onClose 오버로드
+export interface ContentDialogProps
+  extends Omit<DialogProps, 'onClose' | 'children'> {
+  onClose: (
+    event: unknown,
+    reason: 'backdropClick' | 'escapeKeyDown' | 'buttonClick'
+  ) => void;
   title: string;
   content: ReactNode;
   actions?: ReactNode;
-};
+}
 
 const ContentDialog = (props: ContentDialogProps) => {
-  const {
-    open,
-    onClose,
-    sx,
-    title,
-    content,
-    actions,
-    children, // children 무시
-    ...rest
-  } = props;
+  const { open, onClose, sx, title, content, actions, ...rest } = props;
 
   return (
     <MuiDialog
@@ -66,7 +58,7 @@ const ContentDialog = (props: ContentDialogProps) => {
           <Typography variant="title_b">{title}</Typography>
           <Close
             sx={{ marginLeft: 'auto', color: grey[400], cursor: 'pointer' }}
-            onClick={() => onClose('buttonClick')}
+            onClick={(e) => onClose(e, 'buttonClick')}
           />
         </Box>
       </DialogTitle>
