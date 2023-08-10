@@ -1,4 +1,4 @@
-import React, { MouseEvent } from 'react';
+import React, { MouseEvent, ReactNode } from 'react';
 
 import {
   Box,
@@ -14,8 +14,8 @@ import Button from '../Button';
 import Typography from '../Typography';
 
 export interface MessageDialogProps extends Omit<DialogProps, 'children'> {
-  message: string;
-  detail?: string;
+  message: ReactNode;
+  detail?: ReactNode;
   primary?: {
     text?: string;
     onClick: (event: MouseEvent<HTMLButtonElement>) => void;
