@@ -1,4 +1,6 @@
 export * from './Button';
+export * from './ContentDialog';
+export * from './MessageDialog';
 export * from './TableButton';
 export * from './Typography';
 

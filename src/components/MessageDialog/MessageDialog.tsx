@@ -1,4 +1,4 @@
-import React, { MouseEvent } from 'react';
+import React, { MouseEvent, ReactNode } from 'react';
 
 import {
   Box,
@@ -6,16 +6,16 @@ import {
   DialogActions,
   dialogClasses,
   DialogContent,
-  DialogProps as MuiDialogProps,
+  DialogProps,
 } from '@mui/material';
 
 import { deepmerge } from '../../utils';
 import Button from '../Button';
 import Typography from '../Typography';
 
-type MessageDialogProps = MuiDialogProps & {
-  message: string;
-  detail?: string;
+export interface MessageDialogProps extends Omit<DialogProps, 'children'> {
+  message: ReactNode;
+  detail?: ReactNode;
   primary?: {
     text?: string;
     onClick: (event: MouseEvent<HTMLButtonElement>) => void;
@@ -24,20 +24,11 @@ type MessageDialogProps = MuiDialogProps & {
     text?: string;
     onClick: (event: MouseEvent<HTMLButtonElement>) => void;
   };
-};
+}
 
 const MessageDialog = (props: MessageDialogProps) => {
-  const {
-    sx,
-    open,
-    onClose,
-    message,
-    detail,
-    primary,
-    secondary,
-    children, // children 무시
-    ...rest
-  } = props;
+  const { sx, open, onClose, message, detail, primary, secondary, ...rest } =
+    props;
   const hasDetail = !!detail;
 
   return (

@@ -2,7 +2,7 @@ import React from 'react';
 
 import {
   TextField as MuiTextField,
-  TextFieldProps as MuiTextFieldProps,
+  StandardTextFieldProps,
   inputClasses,
   inputBaseClasses,
   outlinedInputClasses,
@@ -13,7 +13,9 @@ import Search from '../../icons/Search';
 import { blueGrey, grey, insurBlue, lineGrey, red } from '../../system/colors';
 import { deepmerge } from '../../utils';
 
-type TextFieldProps = MuiTextFieldProps & { showSearchIcon?: boolean };
+interface TextFieldProps extends StandardTextFieldProps {
+  showSearchIcon?: boolean;
+}
 
 const TextField = (props: TextFieldProps) => {
   const {
