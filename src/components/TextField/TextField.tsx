@@ -2,18 +2,18 @@ import React from 'react';
 
 import {
   TextField as MuiTextField,
-  StandardTextFieldProps,
   inputClasses,
   inputBaseClasses,
   outlinedInputClasses,
   InputAdornment,
+  OutlinedTextFieldProps,
 } from '@mui/material';
 
 import Search from '../../icons/Search';
 import { blueGrey, grey, insurBlue, lineGrey, red } from '../../system/colors';
 import { deepmerge } from '../../utils';
 
-interface TextFieldProps extends StandardTextFieldProps {
+interface TextFieldProps extends OutlinedTextFieldProps {
   showSearchIcon?: boolean;
 }
 
