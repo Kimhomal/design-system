@@ -24,6 +24,7 @@ const TextField = (props: TextFieldProps) => {
     showSearchIcon,
     inputProps,
     FormHelperTextProps,
+    variant = 'outlined',
     ...rest
   } = props;
   const {
@@ -38,6 +39,7 @@ const TextField = (props: TextFieldProps) => {
   return (
     <MuiTextField
       type={type || 'search'}
+      variant={variant}
       InputProps={{
         sx: deepmerge(
           {
