@@ -13,7 +13,7 @@ import Search from '../../icons/Search';
 import { blueGrey, grey, insurBlue, lineGrey, red } from '../../system/colors';
 import { deepmerge } from '../../utils';
 
-interface TextFieldProps extends OutlinedTextFieldProps {
+interface TextFieldProps extends Omit<OutlinedTextFieldProps, 'variant'> {
   showSearchIcon?: boolean;
 }
 
@@ -24,7 +24,6 @@ const TextField = (props: TextFieldProps) => {
     showSearchIcon,
     inputProps,
     FormHelperTextProps,
-    variant = 'outlined',
     ...rest
   } = props;
   const {
@@ -39,7 +38,7 @@ const TextField = (props: TextFieldProps) => {
   return (
     <MuiTextField
       type={type || 'search'}
-      variant={variant}
+      variant="outlined"
       InputProps={{
         sx: deepmerge(
           {
