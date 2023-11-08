@@ -76,6 +76,15 @@ const ChipTehmplate: ComponentStory<typeof Chip> = (args) => {
         </Stack>
         <Stack direction="row" spacing={1}>
           <Chip
+            label="변경요청"
+            clickable={false}
+            type="billRequest"
+            onClick={handleClick}
+            {...args}
+          />
+        </Stack>
+        <Stack direction="row" spacing={1}>
+          <Chip
             label="활성화"
             clickable={false}
             type="active"

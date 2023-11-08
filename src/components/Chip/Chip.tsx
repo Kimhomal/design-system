@@ -14,12 +14,14 @@ type RequestStatus =
   | 'canceled'
   | 'giveUp';
 
+type BillStatus = 'billRequest';
+
 type AgentStatus = 'active' | 'deactive' | 'pendingapproval';
 
 type AgentType = 'parts' | 'repairshop' | 'insurance' | 'selfclaim';
 
 type ChipType = {
-  type?: RequestStatus | AgentStatus | AgentType;
+  type?: RequestStatus | BillStatus | AgentStatus | AgentType;
 };
 
 const Chip = (props: ChipProps & ChipType) => {
@@ -46,6 +48,9 @@ const Chip = (props: ChipProps & ChipType) => {
         return '#FF0400';
       case 'giveUp':
         return '#FF4700';
+      // 청구 상태
+      case 'billRequest':
+        return '#FF862F';
       // 업체 상태
       case 'active':
         return '#DCEBFF';
@@ -79,6 +84,9 @@ const Chip = (props: ChipProps & ChipType) => {
       case 'billComplete':
       case 'canceled':
       case 'giveUp':
+        return '#FFF';
+      // 청구 상태
+      case 'billRequest':
         return '#FFF';
       // 업체 상태
       case 'active':
