@@ -2,9 +2,9 @@
 
 <div align="center">
 
-Insurparts React Components Library
+React Components Library
 
-[Insurparts UI](https://www.chromatic.com/library?appId=62fdf76586470e80b0a42114&groupPrefix=Components%2FINPUTS)
+[Storybook URL](https://www.chromatic.com/library?appId=62fdf76586470e80b0a42114&groupPrefix=Components%2FINPUTS)
 
 </div>
 
